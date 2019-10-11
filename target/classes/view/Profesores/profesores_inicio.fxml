@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" layoutY="10.0" prefHeight="647.0" prefWidth="1259.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TableView fx:id="tabla" layoutX="18.0" layoutY="118.0" prefHeight="483.0" prefWidth="1212.0">
+              <columns>
+                <TableColumn fx:id="ci" editable="false" prefWidth="180.0" text="ID" />
+                <TableColumn fx:id="nombre" editable="false" prefWidth="305.0" text="Nombre" />
+                  <TableColumn fx:id="apellido" editable="false" prefWidth="356.0" text="Apellido" />
+                  <TableColumn fx:id="sexo" editable="false" prefWidth="194.0" text="Sexo" />
+                  <TableColumn fx:id="materia" editable="false" prefWidth="175.0" text="Nro Telefono" />
+              </columns>
+            </TableView>
+            <Button fx:id="nuevo" layoutX="26.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Nuevo" />
+            <Button fx:id="update" layoutX="104.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Actualizar" />
+            <Separator layoutX="194.0" layoutY="71.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="15.0" />
+            <Label layoutX="18.0" layoutY="56.0" prefHeight="17.0" prefWidth="101.0" text="Opciones">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="buscartxt" layoutX="216.0" layoutY="76.0" prefHeight="25.0" prefWidth="630.0" promptText="Buscar por..." />
+            <ComboBox fx:id="filtro" layoutX="879.0" layoutY="75.0" prefHeight="25.0" prefWidth="122.0" />
+            <Label layoutX="216.0" layoutY="55.0" prefHeight="17.0" prefWidth="101.0" text="Busqueda">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="879.0" layoutY="53.0" prefHeight="17.0" prefWidth="101.0" text="Filtros">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="853.0" layoutY="69.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="15.0" />
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" text="Profesores | Inicio">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="20.0" layoutY="41.0" prefHeight="8.0" prefWidth="1212.0" />
+            <ProgressIndicator fx:id="indicator" layoutX="1176.0" layoutY="69.0" prefHeight="35.0" prefWidth="40.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" layoutY="10.0" prefHeight="647.0" prefWidth="1259.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TableView fx:id="table" layoutX="25.0" layoutY="84.0" prefHeight="540.0" prefWidth="380.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="168.0" text="ID" />
+                  <TableColumn fx:id="nombrecolumn" prefWidth="217.0" text="Nombre" />
+              </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" text="Materia | Inicio">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="20.0" layoutY="41.0" prefHeight="8.0" prefWidth="1212.0" />
+            <Separator layoutX="444.0" layoutY="73.0" orientation="VERTICAL" prefHeight="554.0" prefWidth="6.0" />
+            <Label layoutX="450.0" layoutY="52.0" prefHeight="17.0" prefWidth="45.0" text="Datos">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="473.0" layoutY="95.0" prefHeight="17.0" prefWidth="135.0" text="Nombre de  la Materia:" />
+            <TextField fx:id="materia_txt" layoutX="473.0" layoutY="118.0" prefHeight="25.0" prefWidth="192.0" promptText="Ej: Ciencias" />
+            <Button fx:id="apply" layoutX="473.0" layoutY="174.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Aplicar" />
+            <Button fx:id="add" layoutX="25.0" layoutY="49.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Añadir" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

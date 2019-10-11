@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" layoutY="10.0" prefHeight="647.0" prefWidth="1259.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="19.0" layoutY="8.0" prefHeight="25.0" prefWidth="246.0" text="Horarios ">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="35.0" prefHeight="8.0" prefWidth="1212.0" />
+            <TableView fx:id="tableviewInicio" layoutX="29.0" layoutY="64.0" prefHeight="489.0" prefWidth="509.0">
+               <columns>
+                  <TableColumn fx:id="Hora_ini_Inicio" prefWidth="241.0" text="Hora_Inicio" />
+                  <TableColumn fx:id="hora_fin_Inicio" prefWidth="267.0" text="Hora_Fin" />
+               </columns>
+            </TableView>
+            <JFXTimePicker fx:id="horainipicker_inicio" layoutX="569.0" layoutY="120.0" promptText="Hora Inicio" />
+            <JFXTimePicker fx:id="horafinpicker_ini" layoutX="569.0" layoutY="179.0" promptText="Hora fin" />
+            <Separator layoutX="546.0" layoutY="62.0" orientation="VERTICAL" prefHeight="490.0" prefWidth="7.0" />
+            <Button fx:id="aplicar_inicio" layoutX="676.0" layoutY="258.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="aplicar" />
+            <Button fx:id="anadir_inicio" layoutX="569.0" layoutY="258.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Añadir" />
+            <Label layoutX="561.0" layoutY="62.0" prefHeight="25.0" prefWidth="238.0" text="Datos">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="569.0" layoutY="322.0" prefHeight="17.0" prefWidth="246.0" text="Obs: No se permiten datos duplicados" textFill="#5e5656">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button fx:id="cancel" layoutX="1163.0" layoutY="608.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Cancelar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" layoutY="10.0" prefHeight="647.0" prefWidth="1259.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TableView fx:id="table" layoutX="25.0" layoutY="87.0" prefHeight="537.0" prefWidth="652.0">
+              <columns>
+                  <TableColumn fx:id="bachiller_column" prefWidth="217.0" text="Bachiller" />
+                  <TableColumn fx:id="grado_column" prefWidth="217.0" text="Grado" />
+                  <TableColumn fx:id="seccion_column" prefWidth="217.0" text="Sección" />
+              </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" text="Cursos | Inicio">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="20.0" layoutY="41.0" prefHeight="8.0" prefWidth="1212.0" />
+            <Separator layoutX="701.0" layoutY="57.0" orientation="VERTICAL" prefHeight="571.0" prefWidth="8.0" />
+            <Label layoutX="716.0" layoutY="48.0" prefHeight="17.0" prefWidth="45.0" text="Datos">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="732.0" layoutY="88.0" prefHeight="17.0" prefWidth="135.0" text="Bachiller" />
+            <TextField fx:id="bachiller_txt" layoutX="732.0" layoutY="111.0" prefHeight="25.0" prefWidth="192.0" promptText="Ej: Ciencias basicas" />
+            <Button fx:id="add" layoutX="867.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Añadir" />
+            <Button fx:id="apply" layoutX="730.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Aplicar" />
+            <Label layoutX="732.0" layoutY="150.0" prefHeight="17.0" prefWidth="135.0" text="Grado" />
+            <TextField fx:id="grado_txt" layoutX="732.0" layoutY="173.0" prefHeight="25.0" prefWidth="192.0" promptText="Ej: Primero ó 1ro" />
+            <Label layoutX="732.0" layoutY="214.0" prefHeight="17.0" prefWidth="135.0" text="Sección" />
+            <TextField fx:id="seccion_txt" layoutX="732.0" layoutY="237.0" prefHeight="25.0" prefWidth="192.0" promptText="Ej: A" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

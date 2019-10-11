@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Derechos de autor 2019 Rodolfo Elias Ojeda Almada
+  ~
+  ~ Licenciado bajo la Licencia Apache, Versión 2.0 (la "Licencia");
+  ~ no puede utilizar este archivo, excepto en cumplimiento con la Licencia.
+  ~ Puede obtener una copia de la licencia en
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ A menos que sea requerido por la ley aplicable o acordado por escrito, software
+  ~ distribuido bajo la Licencia se distribuye "TAL CUAL",
+  ~ SIN GARANTÍAS O CONDICIONES DE NINGÚN TIPO, ya sea expresa o implícita.
+  ~ Consulte la Licencia para el idioma específico que rige los permisos y
+  ~ Limitaciones bajo la Licencia.
+  -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Alumnos">
+            <items>
+              <MenuItem fx:id="inicio_alumno" mnemonicParsing="false" text="Inicio" />
+                  <MenuItem fx:id="registro_alumno" mnemonicParsing="false" text="Registro" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Profesores">
+            <items>
+              <MenuItem fx:id="inicio_profesor" mnemonicParsing="false" text="Inicio" />
+                  <MenuItem fx:id="registro_profesor" mnemonicParsing="false" text="Registro" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Materias">
+            <items>
+              <MenuItem fx:id="inicio_materia" mnemonicParsing="false" text="Mostrar" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Horarios">
+               <items>
+                  <MenuItem fx:id="inicio_horarios" mnemonicParsing="false" text="Inicio" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cursos">
+               <items>
+                  <MenuItem fx:id="inicio_cursos" mnemonicParsing="false" text="Inicio" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Asistencias">
+               <items>
+                  <MenuItem fx:id="asistencia_inicio" mnemonicParsing="false" text="Inicio" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Opciones">
+               <items>
+                  <MenuItem fx:id="configuracion" mnemonicParsing="false" text="Configuración" />
+                  <MenuItem fx:id="acerca_de" mnemonicParsing="false" text="Acerca de" />
+                  <MenuItem fx:id="inicio" mnemonicParsing="false" text="Inicio" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabmenu" cache="true" prefHeight="699.0" prefWidth="1280.0" rotateGraphic="true" />
+   </children>
+</VBox>

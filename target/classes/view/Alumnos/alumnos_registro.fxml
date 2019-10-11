@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="8.0" layoutY="10.0" prefHeight="647.0" prefWidth="1259.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="16.0" layoutY="14.0" prefHeight="25.0" prefWidth="246.0" text="Alumnos | Registro">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="40.0" prefHeight="9.0" prefWidth="1232.0" />
+            <Label layoutX="18.0" layoutY="58.0" prefHeight="17.0" prefWidth="116.0" text="Datos Personales">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="105.0" prefHeight="17.0" prefWidth="56.0" text="Nombre:" />
+            <TextField fx:id="nombretxt" layoutX="91.0" layoutY="101.0" prefHeight="25.0" prefWidth="161.0" promptText="Ej: Sebastian" />
+            <Label layoutX="26.0" layoutY="144.0" prefHeight="17.0" prefWidth="50.0" text="Apellido:" />
+            <TextField fx:id="apellidotxt" layoutX="91.0" layoutY="140.0" prefHeight="25.0" prefWidth="161.0" promptText="Ej: Cardozo" />
+            <Label layoutX="26.0" layoutY="181.0" prefHeight="17.0" prefWidth="42.0" text="Sexo:" />
+            <ComboBox fx:id="sexocombo" layoutX="91.0" layoutY="177.0" prefHeight="25.0" prefWidth="161.0" />
+            <Label layoutX="292.0" layoutY="104.0" prefHeight="17.0" prefWidth="82.0" text="Nro Madre:" />
+            <TextField fx:id="nromadretxt" layoutX="398.0" layoutY="100.0" promptText="Ej: 0983..." />
+            <Label layoutX="292.0" layoutY="143.0" prefHeight="17.0" prefWidth="82.0" text="Nro Padre:" />
+            <TextField fx:id="nropadretxt" layoutX="398.0" layoutY="139.0" promptText="Ej:0994..." />
+            <Label layoutX="576.0" layoutY="58.0" prefHeight="17.0" prefWidth="116.0" text="Curso">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="576.0" layoutY="88.0" orientation="VERTICAL" prefHeight="163.0" prefWidth="5.0" />
+            <Label layoutX="594.0" layoutY="111.0" prefHeight="17.0" prefWidth="56.0" text="Bachiller:" />
+            <ComboBox fx:id="bachillercombo" layoutX="659.0" layoutY="107.0" prefHeight="25.0" prefWidth="104.0" />
+            <Label layoutX="594.0" layoutY="148.0" prefHeight="17.0" prefWidth="56.0" text="Grado:" />
+            <ComboBox fx:id="gradocombo" layoutX="659.0" layoutY="144.0" prefHeight="25.0" prefWidth="104.0" />
+            <Label layoutX="594.0" layoutY="187.0" prefHeight="17.0" prefWidth="56.0" text="Sección:" />
+            <ComboBox fx:id="seccionCombo" layoutX="659.0" layoutY="183.0" prefHeight="25.0" prefWidth="104.0" />
+            <Label layoutX="292.0" layoutY="180.0" prefHeight="17.0" prefWidth="82.0" text="Promoción" />
+            <TextField fx:id="promotxt" layoutX="398.0" layoutY="176.0" promptText="Ej: #19" />
+            <TableView fx:id="tabla" layoutX="14.0" layoutY="299.0" prefHeight="334.0" prefWidth="967.0">
+              <columns>
+                <TableColumn fx:id="columnadni" prefWidth="107.0" text="ID" />
+                <TableColumn fx:id="columnanombre" prefWidth="100.0" text="Nombre" />
+                  <TableColumn fx:id="columnaApellido" prefWidth="93.0" text="Apellido" />
+                  <TableColumn fx:id="columnasexo" prefWidth="73.0" text="Sexo" />
+                  <TableColumn fx:id="columnapadre" prefWidth="133.0" text="Nro Padre" />
+                  <TableColumn fx:id="columnamadre" prefWidth="117.0" text="Nro Madre" />
+                  <TableColumn fx:id="columnapromo" prefWidth="95.0" text="Promoción" />
+                  <TableColumn fx:id="columnabachiller" prefWidth="88.0" text="Bachiller" />
+                  <TableColumn fx:id="columnagrado" prefWidth="90.0" text="Grado" />
+                  <TableColumn fx:id="columnaseccion" prefWidth="70.0" text="Sección" />
+              </columns>
+            </TableView>
+            <Button fx:id="anadir" layoutX="16.0" layoutY="263.0" mnemonicParsing="false" text="Añadir" />
+            <Button fx:id="cancelar" layoutX="1184.0" layoutY="570.0" mnemonicParsing="false" text="Cancelar" />
+            <Button fx:id="guardar" layoutX="76.0" layoutY="263.0" mnemonicParsing="false" text="Guardar" />
+            <ProgressIndicator fx:id="indicator" layoutX="947.0" layoutY="263.0" prefHeight="25.0" prefWidth="34.0" />
+            <Label fx:id="size" layoutX="580.0" layoutY="273.0" prefHeight="25.0" prefWidth="116.0" text="Cantidad: ">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
