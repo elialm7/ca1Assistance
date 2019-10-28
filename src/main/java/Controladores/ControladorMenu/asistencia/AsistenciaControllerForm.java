@@ -261,6 +261,7 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             title.setText(detalles);
         }
     }
+
     /**
      *
      *
@@ -494,7 +495,6 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             return new AsistenciaDiaria(fecha, curso);
 
         }
-
         private void save(){
             RegistroActividades registroActividades = new RegistroActividades();
             registroActividades.setAsistenciaDiaria(this.createOne());
@@ -502,7 +502,6 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             registroActividades.setAlumnoAsistenciaManipulator(asisalumno);
             SavetoDB(registroActividades);
         }
-
         private void SavetoDB(RegistroActividades registroActividades){
             Task<Boolean> booleanTask = new Task<Boolean>() {
                 @Override
@@ -516,7 +515,6 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             HiloExecutor.execute(booleanTask);
 
         }
-
         private void cancelar(){
             try {
                 if (NotificationHelper.get().notifyOnCancelOperation().get() == ButtonType.OK) {
@@ -528,7 +526,6 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             }
 
         }
-
         private void setEstatus(boolean b){
             if(b){
                 indicator.setVisible(true);

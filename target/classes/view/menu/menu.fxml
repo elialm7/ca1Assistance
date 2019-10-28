@@ -16,8 +16,12 @@
   ~ Limitaciones bajo la Licencia.
   -->
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.VBox?>
+
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar>
@@ -59,6 +63,8 @@
                   <MenuItem fx:id="configuracion" mnemonicParsing="false" text="Configuración" />
                   <MenuItem fx:id="acerca_de" mnemonicParsing="false" text="Acerca de" />
                   <MenuItem fx:id="inicio" mnemonicParsing="false" text="Inicio" />
+                  <MenuItem fx:id="importar" mnemonicParsing="false" text="Importar" />
+                  <MenuItem fx:id="exportar" mnemonicParsing="false" text="Exportar" />
                </items>
             </Menu>
         </menus>

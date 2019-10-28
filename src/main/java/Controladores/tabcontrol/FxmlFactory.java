@@ -36,7 +36,7 @@ public class FxmlFactory implements NodeSupplier<Fxmls> {
                 case PROFESOR_EDICION:
                     return loadFxml(getlocation("/view/Profesores/Profesores_Edicion.fxml"), controller);
                 case SYSTEM_LOGIN:
-                    return loadFxml(getlocation("/view/Menu/login/login.fxml"), controller);
+                    return loadFxml(getlocation("/view/menu/login/login.fxml"), controller);
                 case CONFIG:
                     return loadFxml(getlocation("/view/informaciones/config.fxml"), controller);
                 case ASISTENCIA_FORM:

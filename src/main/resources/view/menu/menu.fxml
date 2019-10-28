@@ -59,6 +59,8 @@
                   <MenuItem fx:id="configuracion" mnemonicParsing="false" text="Configuración" />
                   <MenuItem fx:id="acerca_de" mnemonicParsing="false" text="Acerca de" />
                   <MenuItem fx:id="inicio" mnemonicParsing="false" text="Inicio" />
+                  <MenuItem fx:id="importar" mnemonicParsing="false" text="Importar" />
+                  <MenuItem fx:id="exportar" mnemonicParsing="false" text="Exportar" />
                </items>
             </Menu>
         </menus>

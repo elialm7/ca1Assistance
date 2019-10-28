@@ -2,6 +2,7 @@ package Tests;
 
 import Modelos.Conexion.ConexionIMP.sqliteConection;
 import Modelos.Conexion.MyConnection;
+import Modelos.IO.IOManager;
 import Modelos.Pojos.Asistencia.AlumnoAsistencia.AlumnoAsistencia;
 import Modelos.Pojos.Asistencia.AlumnoAsistencia.AlumnoHorarioAsistencia;
 import Modelos.Pojos.Asistencia.util.AsistenciaDiaria;
@@ -18,6 +19,12 @@ class AsistenciaAlumnoDAOTest extends TestCase {
 
     @Test
     void add() {
+
+
+        IOManager ioManager = new IOManager();
+
+      //  ioManager.importar(new FileChooser().showOpenDialog(null));
+
 
 
 

@@ -28,6 +28,7 @@ import Controladores.ControladorMenu.asistencia.AsistenciaControllerInicio;
 import Controladores.ControladorMenu.informaciones.configurationController;
 import Controladores.Enums.Fxmls;
 import Controladores.tabcontrol.TabManipulator;
+import Modelos.IO.IOManager;
 import Modelos.Pojos.Users.User;
 import Modelos.SqliteDaoService.DaoService;
 import Servicios.alerta.Alerta;
@@ -40,14 +41,14 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
+
 public class MenuController implements Initializable {
     private Stage st;
 
@@ -85,6 +86,12 @@ public class MenuController implements Initializable {
 
     @FXML
     private MenuItem inicio;
+
+    @FXML
+    private MenuItem importar;
+
+    @FXML
+    private MenuItem exportar;
 
     @FXML
     private TabPane tabmenu;
@@ -160,6 +167,46 @@ public class MenuController implements Initializable {
         tabController.add(Fxmls.CONFIG, configurationController.class, "Configuración");
     }
 
+
+    private void importar(){
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Data Base file", "*.db");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(extFilter);
+        File file = fileChooser.showOpenDialog(st);
+        if(Objects.isNull(file)){
+            Alerta.CreateAlert(Alert.AlertType.INFORMATION, "Error", "No archivo db seleccionado", "Debe seleccionar un archivo .db para importar.", st);
+        }else{
+            String name = file.getName();
+            if(name.endsWith(".db")){
+                IOManager manager = new IOManager();
+                manager.importar(file);
+            }else{
+                Alerta.CreateAlert(Alert.AlertType.INFORMATION, "Error", "No se reconoce este tipo de archivo", "Debe seleccionar un archivo .db para importar.", st);
+            }
+        }
+
+    }
+
+    private void exportar(){
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showSaveDialog(st);
+
+        if(Objects.isNull(file)){
+            Alerta.CreateAlert(Alert.AlertType.INFORMATION, "Error", "No ubicacion seleccionada", "Debe seleccionar un archivo .dbca1 para exportar.", st);
+        }else{
+            String name = file.getName();
+            if(name.endsWith(".db")){
+                IOManager manager = new IOManager();
+                manager.export(file);
+            }else{
+                Alerta.CreateAlert(Alert.AlertType.INFORMATION, "Error", "No se reconoce este tipo de archivo", "Debe seleccionar un archivo .db para importar.", st);
+            }
+        }
+
+
+
+    }
+
     private void set_Events(){
         inicio_alumno.setOnAction(event -> mostrarAlumnoInicio());
         registro_alumno.setOnAction(event -> mostrarRegistroAlumno());
@@ -172,6 +219,8 @@ public class MenuController implements Initializable {
         configuracion.setOnAction(event -> mostrarConfiguracion());
         acerca_de.setOnAction(event -> abrirAcerca_de());
         inicio.setOnAction(event -> abrirInicio());
+        importar.setOnAction(event -> importar());
+        exportar.setOnAction(event -> exportar());
         tabController = TabManipulator.getInstance(tabmenu, st);
         st.iconifiedProperty().addListener((observable, oldValue, newValue) -> minizedprocedure(newValue));
     }
@@ -234,6 +283,8 @@ public class MenuController implements Initializable {
          menus.add(configuracion);
          menus.add(acerca_de);
          menus.add(inicio);
+         menus.add(importar);
+         menus.add(exportar);
          return menus;
      }
 }

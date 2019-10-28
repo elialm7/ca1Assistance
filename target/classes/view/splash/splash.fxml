@@ -6,6 +6,22 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<!--
+  ~ Copyright (C) 2019 Rodolfo Elias Ojeda Almada
+  ~
+  ~ Este programa es software libre: puede redistribuirlo y/o modificarlo bajo
+  ~ los términos de la Licencia General Pública de GNU publicada por la Free
+  ~ Software Foundation, ya sea la versión 3 de la Licencia, o (a su elección)
+  ~ cualquier versión posterior.
+  ~
+  ~
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil pero SIN
+  ~ NINGUNA GARANTÍA; incluso sin la garantía implícita de MERCANTIBILIDAD o
+  ~ CALIFICADA PARA UN PROPÓSITO EN PARTICULAR. Vea la Licencia General Pública
+  ~ de GNU para más detalles.
+  -->
+
 <AnchorPane prefHeight="290.0" prefWidth="490.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorSplash.splashController">
    <children>
       <ImageView fitHeight="168.0" fitWidth="270.0" layoutX="111.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
