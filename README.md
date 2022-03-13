@@ -2,10 +2,11 @@
 This was my first serious project i've ever made.
 this software was made using java 8. to track the student attendance.
 the requirements were: 
-  1- being able to control/register all the clases in each block
+  1- being able to control/register all the classes in each block
   2- being able to control/register all the teachers in their schedule. 
-  3- all the data recorded in one database. 
+  3- all the data recorded have to be in one database. 
   4- each watchman must have installed in their computers to record the daily data. 
+  5- The system should be able to create a report in pdf (i didn't enought time to do this feature, so it's not completed .)
   
  the first approach i had was to create a website within an intranet in the school, a central server and  a database, the schoold had the infrastructure but i wasn't allowed to use it. 
  so i decided to build a program with java(the only language i knew pretty well back then), with all the UI to register and record the data from "users".
