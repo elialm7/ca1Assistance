@@ -20,3 +20,8 @@ btw the code is horrible. but with this project i venture myself into learning b
 ![](https://i.ibb.co/Scc7pcs/foto4.png)
 
 
+## Deployment
+
+To deploy this project just download the installer. 
+if you don't trust what it's inside the installer. just download the code
+you will need java 8 and maven to build and run this project. 
