@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="proyecto" />
+        <module name="ca1_assistance" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="proyecto" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -27,9 +27,10 @@ public class runner extends Application {
         splashController control = new splashController(this);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/splash/splash.fxml"));
         loader.setControllerFactory(t->control);
+       // loader.setController(control);
         this.st.setScene(new Scene(loader.load()));
         this.st.initStyle(StageStyle.UNDECORATED);
-        this.st.setTitle("pruebaSplash");
+       // this.st.setTitle("pruebaSplash");
         this.st.getIcons().add(new Image("/utils/logo/iconoProyecto.png"));
         this.st.show();
         control.start();

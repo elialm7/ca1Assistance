@@ -19,6 +19,7 @@ import javafx.util.Pair;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AlumnoAsistenciaAdderForm implements Initializable {
@@ -141,8 +142,12 @@ public class AlumnoAsistenciaAdderForm implements Initializable {
         if(closed){
             return null;
         }else {
-            AlumnoAsistencia alumnoAsistencia = new AlumnoAsistencia(alumnomapa.getObject(alumnobox.getSelectionModel().getSelectedItem()));
-            alumnoAsistencia.setHorarioAsistidos(presencias);
+            AlumnoAsistencia alumnoAsistencia = null;
+            Alumno alumno = this.alumnomapa.getObject(alumnobox.getSelectionModel().getSelectedItem());
+            if(!Objects.isNull(alumno)) {
+                alumnoAsistencia = new AlumnoAsistencia(alumnomapa.getObject(alumnobox.getSelectionModel().getSelectedItem()));
+                alumnoAsistencia.setHorarioAsistidos(presencias);
+            }
             return new Pair<>(alumnoAsistencia, alumnos);
         }
     }

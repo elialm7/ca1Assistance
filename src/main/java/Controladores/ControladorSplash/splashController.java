@@ -49,6 +49,7 @@ public class splashController implements Runnable{
 
     @Override
     public void run() {
+
         Task<Boolean> booleanTask = new Task<Boolean>() {
             @Override
             protected Boolean call() throws Exception {

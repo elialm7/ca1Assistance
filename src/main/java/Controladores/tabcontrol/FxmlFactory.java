@@ -12,6 +12,7 @@ public class FxmlFactory implements NodeSupplier<Fxmls> {
     private URL getlocation(String resource){
         return FxmlFactory.class.getResource(resource);
     }
+
     public  Node getNode(Fxmls fxmls, Object controller){
         try{
             switch (fxmls){

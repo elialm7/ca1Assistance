@@ -27,21 +27,9 @@ public class RegistroActividadesFachada {
 
         private RegistroActividadesFachada(){
             MyConnection connection = new sqliteConection(true);
-            asistenciaAlumnoDAO = new AsistenciaAlumnoDAO(
-                    new AlumnoIMP(connection),
-                    new HorarioAlumno(connection,
-                            new HorarioIMP(connection)),
-                    connection
-            );
-            asistenciaProfesorDAO = new AsistenciaProfesorDAO(
-                    new ProfesorIMP(connection),
-                    connection,
-                    new PresenciaProfesorDAO(
-                        new HorarioIMP(connection),
-                        new MateriaIMP(connection),
-                        connection
-                    )
-            );
+            //Utilizacion de inyeccion de dependencias dentro de una clase que se crea dentro de un static factory
+            asistenciaAlumnoDAO = new AsistenciaAlumnoDAO(new AlumnoIMP(connection), new HorarioAlumno(connection,new HorarioIMP(connection)), connection);
+            asistenciaProfesorDAO = new AsistenciaProfesorDAO(new ProfesorIMP(connection), connection, new PresenciaProfesorDAO(new HorarioIMP(connection), new MateriaIMP(connection), connection));
 
         }
         public synchronized static RegistroActividadesFachada getInstance(){

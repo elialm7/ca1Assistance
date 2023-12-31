@@ -1,10 +1,7 @@
 package Modelos.Conexion.ConexionIMP;
 
 import Modelos.Conexion.MyConnection;
-import Modelos.Directorio.Directory;
-import Modelos.Directorio.DirectoryConstants;
-import Modelos.Directorio.JarDirectory;
-import Modelos.Directorio.NormalDirectory;
+import Modelos.Directorio.*;
 import com.ibatis.common.jdbc.ScriptRunner;
 
 import java.io.BufferedReader;
@@ -16,7 +13,8 @@ import java.sql.SQLException;
 
 public class sqliteConection implements MyConnection {
 
-    private Directory DbDataFile = new NormalDirectory(DirectoryConstants.DataFilesRoot, DirectoryConstants.DATABASENAME); // ubicacion de la base de datos
+    //private Directory DbDataFile = new NormalDirectory(DirectoryConstants.DataFilesRoot, DirectoryConstants.DATABASENAME); // ubicacion de la base de datos
+    private Directory DbDataFile = DirectoryFactory.getDirectoryType("normal", new String[]{ DirectoryConstants.DataFilesRoot, DirectoryConstants.DATABASENAME});
     private Directory SqlDataFile = new JarDirectory(DirectoryConstants.DBFILEDIRECTORY, DirectoryConstants.DBFILEDATA); // ubicacion del archivo sql para la creacion de la base de datos
     private boolean verified;
     public sqliteConection(boolean isverified){
@@ -27,7 +25,7 @@ public class sqliteConection implements MyConnection {
         Connection c = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            if(verified){
+                if(verified){
                 return getconnection();
             }else {
                 if (!DbDataFile.exists()) {
@@ -42,6 +40,7 @@ public class sqliteConection implements MyConnection {
         }
         return c;
     }
+
     private void createdatabase(Connection connection) throws IOException, SQLException {
         ScriptRunner scriptRunner = new ScriptRunner(connection, false, false);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(SqlDataFile.getpath()));

@@ -324,6 +324,7 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             );
             Pair<AsistenciaProfe, List<Profesor>> pairresult = profesorAsistenciaAdderFormController.getData();
             if(Objects.isNull(pairresult))return;
+            if(Objects.isNull(pairresult.getKey()))return;
             profesors = pairresult.getValue();
             AddToMapAndUpdate(pairresult.getKey());
 
@@ -343,25 +344,6 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
             return curso;
         }
 
-        private Curso getCursoverified(){
-            Curso curso = null;
-            String bachiller = combobachiler.getSelectionModel().getSelectedItem();
-            String seccion = seccioncombo.getSelectionModel().getSelectedItem();
-            String grado = gradocombo.getSelectionModel().getSelectedItem();
-            String fecha = fechapicker.getEditor().getText();
-            if(verify(bachiller, seccion, grado, fecha)) {
-                curso = DaoService.getInstance().getCursoInstance().get(
-                                DaoService
-                                        .getInstance()
-                                        .getCursoInstance()
-                                        .getcursoIDbybachiller(bachiller, seccion, grado)
-                        );
-            }
-
-
-                return curso;
-        }
-
         private void OpenAlumnoPresencia(){
             if(!IsAlumnoDataCharged){
                 Curso curso = getCurso();
@@ -374,7 +356,8 @@ public class AsistenciaControllerForm implements Initializable, NodeUpdator {
                     new AlumnoAsistenciaAdderForm(alumnos)
             );
             Pair<AlumnoAsistencia, List<Alumno>> pairresult = alumnoAsistenciaAdderForm.getData();
-            if(Objects.isNull(pairresult))return;
+            if(Objects.isNull(pairresult)) return;
+            if(Objects.isNull(pairresult.getKey()))return;
             alumnos = pairresult.getValue();
             AddtoMapAndUpdateAlumno(pairresult.getKey());
         }

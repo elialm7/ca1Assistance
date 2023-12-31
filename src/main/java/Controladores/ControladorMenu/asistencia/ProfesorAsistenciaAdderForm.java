@@ -20,6 +20,7 @@ import javafx.util.Pair;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ProfesorAsistenciaAdderForm implements Initializable {
@@ -176,8 +177,11 @@ public class ProfesorAsistenciaAdderForm implements Initializable {
         if(closed) {
            return null;
         }else{
-            profe = new AsistenciaProfe(this.mapaProfe.getObject(this.Profesorbox.getSelectionModel().getSelectedItem()));
-            profe.setPresenciaProfes(presenciaProfes);
+            Profesor NotNullProfe = this.mapaProfe.getObject(this.Profesorbox.getSelectionModel().getSelectedItem());
+            if(!Objects.isNull(NotNullProfe)) {
+                profe = new AsistenciaProfe(NotNullProfe);
+                profe.setPresenciaProfes(presenciaProfes);
+            }
             return new Pair<>(profe, profesors);
         }
     }

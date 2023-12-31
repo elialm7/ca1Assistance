@@ -245,7 +245,8 @@ public class AlumnosRegistroController implements Initializable, NodeUpdator {
         if (!VerifyPromo(promo, '#')){
              NotificationHelper.get().notifyIncorrectPromoFormat();
         }else{
-            Alumno alumno = new Alumno(nombre, apellidos , ci, sexo, nrop, nrom, promo, id_curso);
+            //error corregido.
+            Alumno alumno = new Alumno(nombre, apellidos , ci, sexo, nrom, nrop, promo, id_curso);
             Curso curso = new Curso(bachiller, seccion, grado);
             alumnoCurso = new AlumnoCurso(alumno, curso);
         }
