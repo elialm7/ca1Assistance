@@ -102,7 +102,7 @@ public class MenuController implements Initializable {
 
     public void start( ) {
         st.setTitle("CA1 Assistance ");
-        st.getIcons().add(new Image("/utils/logo/iconoProyecto.png"));
+        //st.getIcons().add(new Image("/utils/logo/iconoProyecto.png"));
         st.sizeToScene();
         st.setResizable(false);
         st.setOnCloseRequest(this::salir);

@@ -7,6 +7,9 @@ import com.ibatis.common.jdbc.ScriptRunner;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -41,7 +44,19 @@ public class sqliteConection implements MyConnection {
         return c;
     }
 
+    private StringReader sqlScriptReader(){
+
+        try {
+            String content = new String(Files.readAllBytes(Paths.get(String.valueOf(this.getClass().getResource("/db/ca1.sql")))));
+            return new StringReader(content);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private void createdatabase(Connection connection) throws IOException, SQLException {
+
         ScriptRunner scriptRunner = new ScriptRunner(connection, false, false);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(SqlDataFile.getpath()));
         scriptRunner.runScript(bufferedReader);

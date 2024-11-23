@@ -31,10 +31,12 @@ public class runner extends Application {
         this.st.setScene(new Scene(loader.load()));
         this.st.initStyle(StageStyle.UNDECORATED);
        // this.st.setTitle("pruebaSplash");
-        this.st.getIcons().add(new Image("/utils/logo/iconoProyecto.png"));
+       // this.st.getIcons().add(new Image("/utils/logo/iconoProyecto.png"));
         this.st.show();
         control.start();
     }
+
+
 
     public static void main(String[] args){
         launch(args);
